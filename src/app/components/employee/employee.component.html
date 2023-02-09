@@ -16,11 +16,13 @@
         <dxo-editing mode="form" [allowUpdating]="true" [allowAdding]="true" [allowDeleting]="true">
         </dxo-editing>
 
+        <dxo-filter-row [visible]="true"> </dxo-filter-row>
+
         <dxi-column dataField="Firstname" caption="Prénom"></dxi-column>
         <dxi-column dataField="Lastname" caption="Nom"></dxi-column>
-        <dxi-column dataField="Cellphone" caption="Télèphone Portable"></dxi-column>
+        <dxi-column dataField="Cellphone" caption="Télèphone portable"></dxi-column>
         <dxi-column dataField="Phone" caption="Télèphone fixe"></dxi-column>
-        <dxi-column dataField="Email" caption="Email"></dxi-column> 
+        <dxi-column dataField="Email" caption="Email"></dxi-column>
 
     </dx-data-grid>
 </div>

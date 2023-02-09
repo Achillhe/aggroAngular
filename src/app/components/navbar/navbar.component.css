@@ -63,6 +63,10 @@ nav .deconnexion li.btn1{
     list-style: none;
 }
 
+nav .deconnexion .btn1{
+    text-decoration: none;
+}
+
 nav .deconnexion .btn:hover{
     background-color: rgb(241, 240, 240);
 }

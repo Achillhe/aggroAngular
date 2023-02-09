@@ -8,12 +8,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './service/employee.service';
+import { ConnexionComponent } from './components/connexion/connexion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    ConnexionComponent
   ],
   imports: [
     BrowserModule,

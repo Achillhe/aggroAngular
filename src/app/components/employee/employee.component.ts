@@ -35,7 +35,7 @@ export class EmployeeComponent implements OnInit {
     employee.Lastname = event.newData.Lastname == undefined ? employee.Lastname : event.newData.Lastname
     employee.Cellphone = event.newData.Cellphone == undefined ? employee.Cellphone : event.newData.Cellphone
     employee.Phone = event.newData.Phone == undefined ? employee.Phone : event.newData.Phone
-    employee.Email = event.newData.Email == undefined ? employee.Email : event.newData.aEmail
+    employee.Email = event.newData.Email == undefined ? employee.Email : event.newData.Email
     
   
     this.employeeService.updateEmployee(event.key, employee).subscribe(resulat => {

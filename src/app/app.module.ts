@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DxDataGridModule } from 'devextreme-angular';
-import { NavbarComponent } from './components/navbar/navbar/navbar.component';
-import { EmployeeComponent } from './components/employee/employee/employee.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { EmployeeComponent } from './components/employee/employee.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { EmployeeService } from './service/employee.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,11 @@ import { EmployeeComponent } from './components/employee/employee/employee.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DxDataGridModule
+    DxDataGridModule,
+    HttpClientModule
+    
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

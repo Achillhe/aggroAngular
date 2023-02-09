@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Edensor Free";
-    src: url(../../../../assets/font/Edensor-Free.otf);
+    src: url(../../../assets/font/Edensor-Free.otf);
 }
 
 nav{
@@ -17,7 +17,7 @@ nav .logo{
     font-family: "Edensor Free";
     font-size: 20px;
     margin-left: 20px;
-    color: #a42424;
+    color: #349097;
 }
 
 nav .middle{
@@ -37,11 +37,12 @@ nav .middle .btn{
     margin-right: 10px;
     border: 1px solid black;
     background:white;
-    color: #a42424;
+    color: #349097;
     font-size: 14px;
     padding: 8px 40px;
     cursor: pointer;
     text-align: center;
+    list-style-type: none;
 }
 
 nav .middle .btn:hover{
@@ -55,10 +56,11 @@ nav .deconnexion{
 
 nav .deconnexion li.btn1{
     background:white;
-    color: #a42424;
+    color: #349097;
     border: 1px solid black;
     cursor: pointer;
     padding: 10px 20px;
+    list-style: none;
 }
 
 nav .deconnexion .btn:hover{
@@ -90,7 +92,7 @@ nav .menuburger{
     color: white;
     font-size: 20px;
     margin-bottom: 10px;
-    background-color: #a42424;
+    background-color: #349097;
     padding: 10px 30px;
     border: 1px solid black;
     border-right: none;

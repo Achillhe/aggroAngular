@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Employee} from 'src/app/data/employee.model';
+import { Employee, Service, Site} from 'src/app/data/employee.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +14,20 @@ export class EmployeeService {
     public employeeUpdateEndPoint = "https://localhost:7045/api/Employee/" 
     public employeeAddEndPoint = "https://localhost:7045/api/Employee"
     public employeeRemoveEndPoint = "https://localhost:7045/api/Employee/"
-  
+
+    public serviceEndPoint = "https://localhost:7045/api/Service"
+    public siteEndPoint = "https://localhost:7045/api/Site"
+
     getEmployee():Observable<Employee[]> {
         return this.http.get<Employee[]>(this.employeeEndPoint);
+    }
+
+    getService():Observable<Service[]> {
+        return this.http.get<Service[]>(this.serviceEndPoint);
+    }
+
+    getSite():Observable<Site[]> {
+        return this.http.get<Site[]>(this.siteEndPoint);
     }
 
     updateEmployee(id:number, employee:Employee){

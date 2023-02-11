@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { DxDataGridModule } from 'devextreme-angular';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { EmployeeComponent } from './components/employee/employee.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './service/employee.service';
 import { ConnexionComponent } from './components/connexion/connexion.component';
 
@@ -21,10 +21,11 @@ import { ConnexionComponent } from './components/connexion/connexion.component';
     BrowserModule,
     AppRoutingModule,
     DxDataGridModule,
-    HttpClientModule
+    HttpClientModule,
     
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export class AppBootstrapModule {}

@@ -1,6 +1,5 @@
 <app-navbar></app-navbar>
 
-
 <div class="content">
     <h1>Liste employés</h1>
     <dx-data-grid class="tab" id="gridContainer" [dataSource]="employees" keyExpr="id" [showBorders]="true"
@@ -18,11 +17,16 @@
 
         <dxo-filter-row [visible]="true"> </dxo-filter-row>
 
-        <dxi-column dataField="Firstname" caption="Prénom"></dxi-column>
-        <dxi-column dataField="Lastname" caption="Nom"></dxi-column>
-        <dxi-column dataField="Cellphone" caption="Télèphone portable"></dxi-column>
-        <dxi-column dataField="Phone" caption="Télèphone fixe"></dxi-column>
-        <dxi-column dataField="Email" caption="Email"></dxi-column>
-
+        <dxi-column dataField="firstname" caption="Prénom"></dxi-column>
+        <dxi-column dataField="lastname" caption="Nom"></dxi-column>
+        <dxi-column dataField="cellphone" caption="Télèphone portable"></dxi-column>
+        <dxi-column dataField="phone" caption="Télèphone fixe"></dxi-column>
+        <dxi-column dataField="email" caption="Email"></dxi-column>
+        <dxi-column dataField="serviceId" caption="Service"> 
+            <dxo-lookup [dataSource]="services" displayExpr="name" valueExpr="id"></dxo-lookup>
+        </dxi-column>
+        <dxi-column dataField="siteId" caption="Site">
+            <dxo-lookup [dataSource]="sites" displayExpr="city" valueExpr="id"></dxo-lookup>
+        </dxi-column>
     </dx-data-grid>
 </div>

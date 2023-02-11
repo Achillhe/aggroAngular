@@ -4,10 +4,10 @@
 }
 
 nav{
-    height: 20%;
+    height: 12vh;
     width: 100%;
-    
-    box-shadow: 0 5px 5px #888888;
+    background-color: #F8F9FA;
+    box-shadow: 0 2px 5px #888888;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,29 +20,15 @@ nav .logo{
     color: #349097;
 }
 
-nav .middle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    height: 100%;
-}
-
-nav .middle ul{
-    display: flex;
-}
 
 nav .middle .btn{
-    text-transform: uppercase;
     margin-right: 10px;
-    border: 1px solid black;
     background:white;
     color: #349097;
-    font-size: 14px;
-    padding: 8px 40px;
+    border: 1px solid black;
     cursor: pointer;
-    text-align: center;
-    list-style-type: none;
+    padding: 10px 20px;
+    list-style: none;
 }
 
 nav .middle .btn:hover{
@@ -52,6 +38,9 @@ nav .middle .btn:hover{
 nav .deconnexion{
     padding: 10px 20px;
     margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav .deconnexion li.btn1{
@@ -101,17 +90,6 @@ nav .menuburger{
     border: 1px solid black;
     border-right: none;
     border-left: none;
-}
-
-.main{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 30px;
-}
-
-.tab{
-    width: 80%;
 }
 
 @media screen and (max-width: 1050px){

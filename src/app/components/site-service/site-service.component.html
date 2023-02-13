@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+
+<div class="content">
+    <h1>Sites et services</h1>
+
+    <div class="two">
+        <dx-data-grid class="tab tab2" [dataSource]="sites" [rowAlternationEnabled]="true" keyExpr="id" [showBorders]="true">
+
+            <dxo-search-panel [visible]="true"></dxo-search-panel>
+            <dxo-paging [pageSize]="10"> </dxo-paging>
+            <dxo-pager [visible]="true" [allowedPageSizes]="allowedPageSizes" [displayMode]="displayMode"
+                [showPageSizeSelector]="showPageSizeSelector" [showInfo]="showInfo"
+                [showNavigationButtons]="showNavButtons">
+            </dxo-pager>
+            <dxo-editing mode="form" [allowUpdating]="true" [allowAdding]="true" [allowDeleting]="true">
+            </dxo-editing>
+
+            <dxo-filter-row [visible]="true"> </dxo-filter-row>
+
+            <dxi-column dataField="city" caption="Site"></dxi-column>
+
+        </dx-data-grid>
+
+        <dx-data-grid class="tab" [dataSource]="services" [rowAlternationEnabled]="true" keyExpr="id"
+            [showBorders]="true">
+
+            <dxo-search-panel [visible]="true"></dxo-search-panel>
+            <dxo-paging [pageSize]="10"> </dxo-paging>
+            <dxo-pager [visible]="true" [allowedPageSizes]="allowedPageSizes" [displayMode]="displayMode"
+                [showPageSizeSelector]="showPageSizeSelector" [showInfo]="showInfo"
+                [showNavigationButtons]="showNavButtons">
+            </dxo-pager>
+            <dxo-editing mode="form" [allowUpdating]="true" [allowAdding]="true" [allowDeleting]="true">
+            </dxo-editing>
+
+            <dxo-filter-row [visible]="true"> </dxo-filter-row>
+
+            <dxi-column dataField="name" caption="Service"></dxi-column>
+
+        </dx-data-grid>
+    </div>
+</div>

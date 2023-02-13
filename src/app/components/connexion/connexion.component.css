@@ -17,7 +17,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #349097;
+    background-color: #5A9147;
 }
 
 #container{
@@ -30,7 +30,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #349097;
+    background-color: #5A9147;
 }
 
 form {
@@ -66,7 +66,7 @@ input[type=password] {
 }
 
 input[type=submit] {
-    background-color: #349097;
+    background-color: #5A9147;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -77,6 +77,11 @@ input[type=submit] {
 
 input[type=submit]:hover {
     background-color: white;
-    color: #349097;
-    border: 1px solid #349097;
+    color: #5A9147;
+    border: 1px solid #5A9147;
+}
+
+.form_error{
+    color: red;
+    margin-bottom: 15px;
 }

@@ -1,15 +1,21 @@
 <div class="main">
     <div id="container">
-        <form action="" method="">
+        <form name="form" #f="ngForm" 
+        (ngSubmit)="f.form.valid && onSubmit()">
             <h1>Connexion</h1>
 
-            <label for="nom"><b>Nom</b></label>
-            <input type="text" placeholder="Entrer votre nom" name="nom" id="nom" required>
-            <label for="prenom"><b>Prénom</b></label>
-            <input type="text" placeholder="Entrer votre prénom" name="prenom" id="prenom" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Entrer votre email" name="email" id="email" [(ngModel)]="form.email" #email="ngModel" required>
+            <div class="form_error" *ngIf="email.errors && f.submitted">
+                Email requis!
+            </div>
 
-            <label><b>Mot de passe</b></label>
-            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+            <label for="password"><b>Mot de passe</b></label>
+            <input type="password" placeholder="Entrer le mot de passe" name="password" [(ngModel)]="form.password" #password="ngModel" required minlenght="5">
+            <div class="form_error" *ngIf="password.errors && f.submitted">
+                <div *ngIf="password.errors['required']">Mot de passe requis!</div>
+                <div *ngIf="password.errors['minlenght']">Mot de passe doit faire au moins 5 charactères</div>
+            </div>
 
             <input type="submit" value='LOGIN' (click)="connect()">
         </form>

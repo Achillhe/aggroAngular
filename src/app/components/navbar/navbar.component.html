@@ -1,38 +1,13 @@
-<!-- <div class="main">
-    <div class="sidebar">
-        <ul>
-            <a class="btn1">
-                <li>Liste employés</li>
-            </a>
-            <a>
-                <li>Se déconnecter</li>
-            </a>
-        </ul>
-    </div>
-
-    <nav>
-        <div class="logo">
-            <h1>AGGRO</h1>
-        </div>
-        <div class="middle">
-            <a class="btn1">
-                <li class="btn btn1">Liste employés</li>
-            </a>
-        </div>
-        <div class="deconnexion">
-            <a [routerLink]="''" class="btn1">
-                <li class="btn btn1">Se déconnecter</li>
-            </a>
-        </div>
-        <img src="../../../assets/img/menuBurger.png" alt="" class="menuburger">
-    </nav>
-</div> -->
 <header>
 <img class="logo" src="../../../assets/img/agro.png" alt="logo">
 <nav>
     <ul class="nav-links">
-        <li><a [routerLink]="'/employee'">Liste</a></li>
+        <li><a [routerLink]="'/employee'">Liste des employés</a></li>
+    </ul>
+    <ul class="nav-links">
+        <li><a [routerLink]="'/siteService'">Sites et services</a></li>
     </ul>
 </nav>
-<a class="cta" [routerLink]="''"><button>Se déconnecter</button></a>
+<a [routerLink]="''"><button>Espace Admin</button></a>
+<a [routerLink]="'/visitor'"><button>Se déconnecter</button></a>
 </header>

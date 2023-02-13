@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import notify from 'devextreme/ui/notify';
 import { Employee, Service, Site} from 'src/app/data/employee.model';
-import { EmployeeService } from 'src/app/service/employee.service';
+import { EmployeeService } from 'src/app/service/employeeService/employee.service';
 
 @Component({
   selector: 'app-employee',
@@ -41,7 +41,7 @@ export class EmployeeComponent implements OnInit {
     employee.phone = event.newData.phone == undefined ? employee.phone : event.newData.phone
     employee.email = event.newData.email == undefined ? employee.email : event.newData.email
 
-    employee.siteId = event.newData.sideId == undefined ? employee.siteId : event.newData.siteId
+    employee.siteId = event.newData.siteId == undefined ? employee.siteId : event.newData.siteId
     employee.serviceId = event.newData.serviceId == undefined ? employee.serviceId : event.newData.serviceId
   
     this.employeeService.updateEmployee(event.key, employee).subscribe(resulat => {

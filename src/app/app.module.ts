@@ -9,6 +9,7 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './service/employee.service';
 import { ConnexionComponent } from './components/connexion/connexion.component';
+import { SiteService } from './service/site.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { ConnexionComponent } from './components/connexion/connexion.component';
     HttpClientModule,
     
   ],
-  providers: [EmployeeService],
+  providers: [EmployeeService, SiteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,20 +1,20 @@
 export class Employee {
-    public Id:number;
-    public Firstname:string;
-    public Lastname:string;
-    public Cellphone:string;
-    public Phone:string;
-    public Email:string;
-    public SiteId:string;
-    public ServiceId:string;
+    public id:number;
+    public firstname:string;
+    public lastname:string;
+    public cellphone:string;
+    public phone:string;
+    public email:string;
+    public siteId:number;
+    public serviceId:number;
 }
 
 export class Service {
-    public Id:number;
-    public Name:string;
+    public id:number;
+    public name:string;
 }
 
 export class Site {
-    public Id:number;
-    public City:string;
+    public id:number;
+    public city:string;
 }

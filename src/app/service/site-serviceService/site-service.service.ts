@@ -9,10 +9,7 @@ import { Service, Site } from 'src/app/data/employee.model';
 export class SiteServiceService implements OnInit {
 
   constructor(private http: HttpClient){}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-
+  
     public serviceEndPoint = "https://localhost:7045/api/Service"
     public siteEndPoint = "https://localhost:7045/api/Site"
 
@@ -22,6 +19,9 @@ export class SiteServiceService implements OnInit {
     public siteAddEndPoint = "https://localhost:7045/api/Site"
     public serviceAddEndPoint = "https://localhost:7045/api/Service"
 
+    public siteRemoveEndPoint = "https://localhost:7045/api/Site/"
+    public serviceRemoveEndPoint = "https://localhost:7045/api/Service/"
+
     getService():Observable<Service[]> {
         return this.http.get<Service[]>(this.serviceEndPoint);
     }
@@ -30,9 +30,13 @@ export class SiteServiceService implements OnInit {
         return this.http.get<Site[]>(this.siteEndPoint);
     }
 
-    // updateEmployee(id:number, employee:Employee){
-    //     return this.http.put(this.employeeUpdateEndPoint+id, employee);
-    // }
+    updateSite(id:number, site:Site){
+        return this.http.put(this.siteUpdateEndPoint+id, site);
+    }
+
+    updateService(id:number, service:Service){
+      return this.http.put(this.serviceUpdateEndPoint+id, service);
+  }
 
     addService(site: Site){
         return this.http.post<Service>(this.serviceAddEndPoint, site);
@@ -42,7 +46,15 @@ export class SiteServiceService implements OnInit {
       return this.http.post<Site>(this.siteAddEndPoint, service);
     }
 
-    // removeEmployee(id:number){
-    //     return this.http.delete(this.employeeUpdateEndPoint+id);
-    // }
+    removeSite(id:number){
+        return this.http.delete(this.siteRemoveEndPoint+id);
+    }
+
+    removeService(id:number){
+      return this.http.delete(this.serviceRemoveEndPoint+id);
+    }
+
+    ngOnInit(): void {
+      throw new Error('Method not implemented.');
+    }
 }

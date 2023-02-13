@@ -4,7 +4,8 @@
     <h1>Sites et services</h1>
 
     <div class="two">
-        <dx-data-grid class="tab tab2" [dataSource]="sites" [rowAlternationEnabled]="true" keyExpr="id" [showBorders]="true">
+        <dx-data-grid class="tab tab2" [dataSource]="sites" [rowAlternationEnabled]="true" keyExpr="id" [showBorders]="true"
+        (onRowInserting)="addSite($event)" (onRowUpdating)="updateSite($event)" (onRowRemoving)="removeSite($event)">
 
             <dxo-search-panel [visible]="true"></dxo-search-panel>
             <dxo-paging [pageSize]="10"> </dxo-paging>
@@ -15,14 +16,14 @@
             <dxo-editing mode="form" [allowUpdating]="true" [allowAdding]="true" [allowDeleting]="true">
             </dxo-editing>
 
-            <dxo-filter-row [visible]="true"> </dxo-filter-row>
+            <dxo-filter-row [visible]="true"></dxo-filter-row>
 
             <dxi-column dataField="city" caption="Site"></dxi-column>
 
         </dx-data-grid>
 
         <dx-data-grid class="tab" [dataSource]="services" [rowAlternationEnabled]="true" keyExpr="id"
-            [showBorders]="true">
+            [showBorders]="true" (onRowInserting)="addService($event)" (onRowUpdating)="updateService($event)" (onRowRemoving)="removeService($event)">
 
             <dxo-search-panel [visible]="true"></dxo-search-panel>
             <dxo-paging [pageSize]="10"> </dxo-paging>

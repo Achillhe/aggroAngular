@@ -9,10 +9,10 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeService } from './service/employeeService/employee.service';
 import { ConnexionComponent } from './components/connexion/connexion.component';
-import { SiteService } from './service/siteService/site.service';
 import { FormsModule } from '@angular/forms';
 import { VisitorComponent } from './components/visitor/visitor.component';
 import { SiteServiceComponent } from './components/site-service/site-service.component';
+import { SiteServiceService } from './service/site-serviceService/site-service.service';
 
 
 @NgModule({
@@ -33,7 +33,8 @@ import { SiteServiceComponent } from './components/site-service/site-service.com
     FormsModule
     
   ],
-  providers: [EmployeeService, SiteService],
+  
+  providers: [EmployeeService, SiteServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

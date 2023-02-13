@@ -10,6 +10,7 @@ import { Employee, Service, Site} from 'src/app/data/employee.model';
 export class EmployeeService {
 
   constructor(private http: HttpClient){}
+  
     public employeeEndPoint = "https://localhost:7045/api/Employee"
     public employeeUpdateEndPoint = "https://localhost:7045/api/Employee/" 
     public employeeAddEndPoint = "https://localhost:7045/api/Employee"
@@ -39,6 +40,6 @@ export class EmployeeService {
     }
 
     removeEmployee(id:number){
-        return this.http.delete(this.employeeUpdateEndPoint+id);
+        return this.http.delete(this.employeeRemoveEndPoint+id);
     }
 }

@@ -27,18 +27,29 @@ export class SiteServiceComponent implements OnInit {
     
   }
   
-  // updateSite(event){
-  //   console.log("mon event",event);
-  //   var site = this.sites.find(x => x.id == event.key);
-  //   console.log("mon produit", site)
+  updateSite(event){
+    console.log("mon event",event);
+    var site = this.sites.find(x => x.id == event.key);
+    console.log("mon produit", site)
 
-  //   site.city = event.newData.city == undefined ? site.city : event.newData.city
+    site.city = event.newData.city == undefined ? site.city : event.newData.city
   
-  //   this.siteServiceService.updateSite(event.key, site).subscribe(resulat => {
-  //     notify("Produit correctement modifié", "success", 500);
-    
-  //   });
-  // }
+    this.siteServiceService.updateSite(event.key, site).subscribe(resulat => {
+      notify("Produit correctement modifié", "success", 500);
+    });
+  }
+
+  updateService(event){
+    console.log("mon event",event);
+    var service = this.services.find(x => x.id == event.key);
+    console.log("mon produit", service)
+
+    service.name = event.newData.name == undefined ? service.name : event.newData.name
+  
+    this.siteServiceService.updateService(event.key, service).subscribe(resulat => {
+      notify("Produit correctement modifié", "success", 500);
+    });
+  }
 
   addSite(event){
     console.log("new product", event);
@@ -54,12 +65,19 @@ export class SiteServiceComponent implements OnInit {
     });
   }
 
-  // removeEmployee(event){
-  //   console.log("remove product", event);
-  //   this.employeeService.removeEmployee(event.data.id).subscribe(resulat => {
-  //     notify("Produit correctement supprimé", "success", 500);
-  //   });
-  // }
+  removeSite(event){
+    console.log("remove product", event);
+    this.siteServiceService.removeSite(event.data.id).subscribe(resulat => {
+      notify("Produit correctement supprimé", "success", 500);
+    });
+  }
+
+  removeService(event){
+    console.log("remove product", event);
+    this.siteServiceService.removeService(event.data.id).subscribe(resulat => {
+      notify("Produit correctement supprimé", "success", 500);
+    });
+  }
 
   ngOnInit(): void {
     this.siteServiceService.getService().subscribe(resultat => {

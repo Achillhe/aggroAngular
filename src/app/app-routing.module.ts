@@ -6,8 +6,9 @@ import { SiteServiceComponent } from './components/site-service/site-service.com
 import { VisitorComponent } from './components/visitor/visitor.component';
 
 const routes: Routes = [
+  {path:'',component:VisitorComponent},
   {
-    path:'',
+    path:'connexion',
     component:ConnexionComponent
   },
   {

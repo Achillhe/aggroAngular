@@ -1,5 +1,12 @@
-<app-navbar></app-navbar>
-
+<header>
+    <img class="logo" src="../../../assets/img/agro.png" alt="logo">
+    <nav>
+        <ul class="nav-links">
+            <li><a [routerLink]="'/visitor'">Liste des employés</a></li>
+        </ul>
+    </nav>
+    <a [routerLink]="'/connexion'"><button>Espace Admin</button></a>
+</header>
 <div class="content">
     <h1>Liste employés</h1>
     <dx-data-grid class="tab" [dataSource]="employees" [rowAlternationEnabled]="true" keyExpr="id"
